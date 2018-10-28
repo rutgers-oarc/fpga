@@ -7,6 +7,8 @@ PowerEdge R740XD Server:
 - 24 slots of 32GB RDIMMs (total 768Gb RAM) 
 - 4 FPGA cards [Intel FPGA Programmable Acceleration Card](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/acceleration-card-arria-10-gx.html)
 
+## How to get access
+TBD
 
 ## Resources
 
