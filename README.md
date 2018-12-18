@@ -11,12 +11,24 @@ PowerEdge R740XD Server:
 
 - FPGA box is part of ERN (Eastern Regional Network), and hosted at Rutgers. Requests for access should fill out [this form for general Amarel access](https://oarc.rutgers.edu/access/) and specify that you need an account on ERN and that hardware you would like to use is FPGA. 
 
+## Directions to get to the box
+
+- ssh to amarel 
+- ssh to a machine called mace. This is a login node for Rutgers part of the ERN slurm federation
+- run this command: `salloc -p fpga`
+
 ## Resources
 
 - [Parallel Programming for FPGAs book](http://kastner.ucsd.edu/hlsbook/)
 - [Intel Acceleration Stack](https://www.intel.com/content/www/us/en/programmable/solutions/acceleration-hub/acceleration-stack.html)
 - [Intel FPGA training](https://www.intel.com/content/www/us/en/programmable/solutions/acceleration-hub/knowledge-center.html)
+- [List of reference designs](https://www.intel.com/content/www/us/en/programmable/products/design-software/embedded-software-developers/opencl/support.html#ref-designs)
+- [5-lecture course material for students](https://software.intel.com/en-us/ai-academy/students/kits/dl-inference-fpga)
+- [Intel fpga channel on youtube](https://www.youtube.com/channel/UC0wEPiFb0J6AZZ3oPXRoRpw)
+- [Catalog of many FPGA classes](https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html)
 
 ## Past Events
 
+- Nov xx, 2018 - AI on PC workshop (for engineering undergraduate students)
 - Oct 8, 2018 - FPGA Workshop by Bill Jenkins
+
