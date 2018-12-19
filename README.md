@@ -30,6 +30,7 @@ PowerEdge R740XD Server:
 - [Open Programmable Acceleration Engine](https://01.org/opae) - has link to github
 - [Intel's developer community](https://devmesh.intel.com/)
 - [Some interesting projects (not hardware, but was pointed to it at the OpenVINO workshop](https://github.com/IntelLabs) 
+- If you need to use FPGAs from Matlab check out [this 32-minute online course](https://www.intel.com/content/www/us/en/programmable/support/training/course/odspintro.html) on DSP Builder. 
 
 ## Past Events
 
