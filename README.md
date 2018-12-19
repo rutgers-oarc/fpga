@@ -26,6 +26,10 @@ PowerEdge R740XD Server:
 - [5-lecture course material for students](https://software.intel.com/en-us/ai-academy/students/kits/dl-inference-fpga)
 - [Intel fpga channel on youtube](https://www.youtube.com/channel/UC0wEPiFb0J6AZZ3oPXRoRpw)
 - [Catalog of many FPGA classes](https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html)
+- [Intel's open source website/community](https://01.org/)  - you can search for FPGA
+- [Open Programmable Acceleration Engine](https://01.org/opae) - has link to github
+- [Intel's developer community](https://devmesh.intel.com/)
+- [Some interesting projects (not hardware, but was pointed to it at the OpenVINO workshop](https://github.com/IntelLabs) 
 
 ## Past Events
 
