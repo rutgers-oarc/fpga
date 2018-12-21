@@ -41,3 +41,21 @@ PowerEdge R740XD Server:
 - Nov xx, 2018 - AI on PC workshop (for engineering undergraduate students)
 - Oct 8, 2018 - FPGA Workshop by Bill Jenkins
 
+## Directory organization
+
+The software is in `/scratch/inteldevstack`  directory: 
+
+- `intelFPGA_pro`  - this is where you will find HLS and Quartus
+- `a10_gx_pac_ias_1_1_pv` - this is where you will find OpenCL tools. 
+
+### Instructions to run helloworld in OpenCL
+
+## Sharing model - TO BE IMPLEMENTED
+
+ERN federation runs a scheduler called Slurm. Slurm basically uses cgroups to limit users' resources on a shared machine. What we have in mind is the following setup: 
+- `-p fpga` is a slurm partition on ERN that contains the fpga1 machine
+- `--gres=fpga:1` is to specify how many boards you want to use at a time (here, 1)
+
+
+
+
