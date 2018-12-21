@@ -15,7 +15,11 @@ PowerEdge R740XD Server:
 
 - ssh to amarel 
 - ssh to a machine called mace. This is a login node for Rutgers part of the ERN slurm federation
-- run this command: `salloc -p fpga`
+- FOR now: ssh to fpga1. (For the future: run this command: `salloc -p fpga ...TBD... `  (in order for slurm to allocate fpga resources to you) )
+
+## Join the community 
+
+- We have a [user forum](https://ask.oarc.rutgers.edu/questions/) - login with your Rutgers credentials
 
 ## Resources
 
