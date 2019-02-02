@@ -63,6 +63,11 @@ Writing ../hw/afu_json_info.vh
 
 ## Building the .gbs file
 
+```
+cd build_synth
+${OPAE_PLATFORM_ROOT}/bin/run.sh    # this is the longest portion with lots of output
+```
+
 This is going to take a while and produce a lot of output (debug flag is set to INFO). The following is the end of this long output: 
 
 ```
