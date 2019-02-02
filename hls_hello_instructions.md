@@ -29,6 +29,25 @@ All these commands (with the exception of specifying one of 4 cards) come from t
 
 # Outputs of commands
 
+## Getting your path correct
+
+```
+export QUARTUS_HOME="/scratch/inteldevstack_v1.2/intelFPGA_pro/quartus"
+export INTELFPGAOCLSDKROOT="/scratch/inteldevstack_v1.2/intelFPGA_pro/hld"
+export CL_CONTEXT_COMPILER_MODE_INTELFPGA=3
+QUARTUS_BIN="/scratch/inteldevstack_v1.2/intelFPGA_pro/quartus/bin"
+export PATH="${QUARTUS_BIN}":"${PATH}"
+export OPAE_PLATFORM_ROOT="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv"
+export AOCL_BOARD_PACKAGE_ROOT="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv/opencl/opencl_bsp"
+source $AOCL_BOARD_PACKAGE_ROOT/linux64/libexec/setup_permissions.sh >> /dev/null   # need to check this one
+OPAE_PLATFORM_BIN="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv/bin"
+export PATH="${PATH}":"${OPAE_PLATFORM_BIN}"
+
+export  QSYS_ROOTDIR="/scratch/inteldevstack_v1.2/intelFPGA_pro/qsys/bin"
+export ALTERAOCLSDKROOT="/scratch/inteldevstack_v1.2/intelFPGA_pro/hld"
+```
+
+## Setup
 ```
 [kp807@fpga1 hello_afu]$ afu_synth_setup --source hw/rtl/filelist.txt build_synth
 Copying build from /scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv/hw/lib/build...
@@ -144,7 +163,7 @@ Usage:
 ```
 
 
-Now, 3B in hex = 59 in decimal, so we specify this bus. If you notice, PCI s:b:d:f  is socket:bus:device:function, so socket is 0000, bus is 3B, device is 0 and function is 0. 
+Now, 3B in hex = 59 in decimal, so we specify this bus. If you notice, `PCI s:b:d:f`  is `socket:bus:device:function`, so socket is 0000, bus is 3B, device is 0 and function is 0. 
 
 ```
 [kp807@fpga1 build_synth]$ fpgaconf  -B 59 -S 0 hello_afu.gbs 
