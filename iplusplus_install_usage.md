@@ -3,6 +3,7 @@
 
 - path to i++ compiler: `/scratch/inteldevstack_v1.2/intelFPGA_pro/hls/bin/i++`
 ```
+cd /scratch/inteldevstack_v1.2/intelFPGA_pro/hls/examples/counter
 i++ counter.cpp  -v  -march=Arria10 -o test-fpga --simulator none  #default is modelsim, we don't have it yet
 ```
 
