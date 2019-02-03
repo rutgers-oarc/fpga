@@ -1,9 +1,9 @@
 # Introduction to VNC
 
-X11 forwarding is normally very slow. TurboVNC is very fast. There is now gnome Linux desktop installed on fpga1 machine, with the VNC server that's installed systemwide and any user of fpga1 can use. You start the vncserverson fpga1, and it forwards x-packets in an optimized and compressed form through tunneling (with one hop through amarel) to your local machine. You need two things for that to happen: 
+Some of the usefule tools are require a graphical interface, but X11 forwarding is normally very slow from a remote server. TurboVNC, on the other hand, is very fast. There is now gnome Linux desktop installed on fpga1 machine, with the VNC server that's installed systemwide and any user of fpga1 can use. You start the vncserver on fpga1, and the server forwards x-packets in an optimized and compressed form through ssh tunneling (with one hop through amarel) to your local machine and displays things like firefox (for viewing reports) or SDK tools, from the remote location. You need two things for that to happen: 
 
-- you need to start a vncviewer (and of course, install a vncviewer first) so that packets can get displayed on your local machine
-- you need to do ssh tunneling so that the packets can be forwarded from fpga1 to your local machine
+- you need to start a vncviewer on your local machine (and of course, install a vncviewer first) so that packets can get displayed on your local machine
+- you need to do ssh tunneling from your local machine to fpga1 so that the packets can be forwarded from fpga1 to your local machine
 
 ## Install VNC client on your local machine
 
@@ -14,10 +14,10 @@ sudo yum install tigervnc vinagre
 
 ## Tunnel to fpga1
 
-Tunneling to fpga1 (`-A` for using your ssh keys, so no passwords necessary) means forwarding all packets through port 5091. On fpga1 you will start vnc server at this port, so all x-packets will get sent through this port through to amarel and then to your laptop.
+ssh tunneling to fpga1 (`-A` for using your ssh keys, so no passwords necessary) means forwarding all packets through port 5091. On fpga1 you will start vnc server at this (default) port, so all x-packets will get sent through this port through to amarel and then to your laptop.
 
 ```
-ssh -A -L 5901:localhost:5901 kp807@amarel.hpc.rutgers.edu
+ssh -A -L 5901:localhost:5901 kp807@amarel.hpc.rutgers.edu  #use your own netid
 ssh -A -L 5901:localhost:5901 fpga1
 ```
 
@@ -25,12 +25,21 @@ NOTE: If multiple people are using vncserver, each person will use a different p
 
 ## Start vncserver on fpga1
 
-On fpga1 execute this command in a terminal:
+On fpga1 execute this command in a terminal (I'm pasting all my input and output):
 
 ```
 #start vncserver
 [kp807@fpga1 ~]$ vncserver
 
+Desktop 'TurboVNC: fpga1:1 (kp807)' started on display fpga1:1
+
+Starting applications specified in /home/kp807/.vnc/xstartup.turbovnc
+Log file is /home/kp807/.vnc/fpga1:1.log
+```
+
+Go the the next section of the instruction (I'm putting the following information here because it belongs here logically, though not temporally): 
+
+```
 #after you are done with the session, to close the vncserver
 [kp807@fpga1 ~]$ vncserver -kill :1
 
@@ -47,10 +56,10 @@ NOTE: same note for the possibly differing port than 5901 as before - look at th
 
 ## Open VNC viewer on laptop
 
-on laptop, after installing vncviewer, run the following:
+On your local machine, after installing vncviewer, run the following:
 ```
 vncviewer &
 ```
-and in the display type in `:1` (displays start from 0 upwards, and your `display:0` is your laptop).
+and in the display type in `:1` (displays start from 0 upwards, and your `display:0` is your laptop). Type in the password that you set up when starting the vncserver. This need not be your rutgers netid password. 
 
 This should be all - complicated enough!
