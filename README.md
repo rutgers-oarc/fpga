@@ -38,17 +38,20 @@ PowerEdge R740XD Server:
 
 ## Past Events
 
+- Jan 18, 2019 - FPGA brown bag lunch
 - Nov xx, 2018 - AI on PC workshop (for engineering undergraduate students)
 - Oct 8, 2018 - FPGA Workshop by Bill Jenkins
 
 ## Directory organization
 
-The software is in `/scratch/inteldevstack`  directory: 
+The software is in `/scratch/inteldevstack*`  directory: 
 
 - `intelFPGA_pro`  - this is where you will find HLS and Quartus
-- `a10_gx_pac_ias_1_1_pv` - this is where you will find OpenCL tools. 
+- `a10_gx_pac_ias_1_2_pv` - this is where you will find OpenCL tools. 
 
 ### Instructions to run helloworld in OpenCL
+
+See a separate example in the repo. 
 
 ## Sharing model - TO BE IMPLEMENTED
 
@@ -57,5 +60,21 @@ ERN federation runs a scheduler called Slurm. Slurm basically uses cgroups to li
 - `--gres=fpga:1` is to specify how many boards you want to use at a time (here, 1)
 
 
+# Set your path correctly 
 
+```
+export QUARTUS_HOME="/scratch/inteldevstack_v1.2/intelFPGA_pro/quartus"
+export INTELFPGAOCLSDKROOT="/scratch/inteldevstack_v1.2/intelFPGA_pro/hld"
+export CL_CONTEXT_COMPILER_MODE_INTELFPGA=3
+QUARTUS_BIN="/scratch/inteldevstack_v1.2/intelFPGA_pro/quartus/bin"
+export PATH="${QUARTUS_BIN}":"${PATH}"
+export OPAE_PLATFORM_ROOT="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv"
+export AOCL_BOARD_PACKAGE_ROOT="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv/opencl/opencl_bsp"
+OPAE_PLATFORM_BIN="/scratch/inteldevstack_v1.2/a10_gx_pac_ias_1_2_pv/bin"
+export PATH="${PATH}":"${OPAE_PLATFORM_BIN}"
 
+export  QSYS_ROOTDIR="/scratch/inteldevstack_v1.2/intelFPGA_pro/qsys/bin"
+export ALTERAOCLSDKROOT="/scratch/inteldevstack_v1.2/intelFPGA_pro/hld"
+
+source $INTELFPGAOCLSDKROOT/init_opencl.sh #sets LD_LIBRARY_PATH correctly - for people who want to use OpenCL
+```
