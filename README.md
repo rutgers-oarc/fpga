@@ -78,3 +78,7 @@ export ALTERAOCLSDKROOT="/scratch/inteldevstack_v1.2/intelFPGA_pro/hld"
 
 source $INTELFPGAOCLSDKROOT/init_opencl.sh #sets LD_LIBRARY_PATH correctly - for people who want to use OpenCL
 ```
+
+# Open graphical programs
+
+See the file vncserver.md in this directory for the instructions how to install vnc client (on a Linux machine). Not sure about Mac or Windows. (TODO)
