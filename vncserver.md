@@ -62,4 +62,9 @@ vncviewer &
 ```
 and in the display (or vncserver) type in `:1` (displays start from 0 upwards, and your `display:0` is your laptop). Type in the password that you set up when starting the vncserver. This need not be your rutgers netid password.
 
+NOTE: you may need to add additional instructions to vncviewer, like so: 
+```
+vncviewer localhost:5901
+```
+
 This should be all - complicated enough!
