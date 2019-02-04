@@ -29,7 +29,7 @@ On fpga1 execute this command in a terminal (I'm pasting all my input and output
 
 ```
 #start vncserver
-[kp807@fpga1 ~]$ vncserver
+[kp807@fpga1 ~]$ /opt/TurboVNC/bin/vncserver
 
 Desktop 'TurboVNC: fpga1:1 (kp807)' started on display fpga1:1
 
@@ -60,6 +60,6 @@ On your local machine, after installing vncviewer, run the following:
 ```
 vncviewer &
 ```
-and in the display type in `:1` (displays start from 0 upwards, and your `display:0` is your laptop). Type in the password that you set up when starting the vncserver. This need not be your rutgers netid password. 
+and in the display (or vncserver) type in `:1` (displays start from 0 upwards, and your `display:0` is your laptop). Type in the password that you set up when starting the vncserver. This need not be your rutgers netid password.
 
 This should be all - complicated enough!
