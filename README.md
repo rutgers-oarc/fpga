@@ -2,24 +2,42 @@
 
 ## Hardware Specs
 
-PowerEdge R740XD Server: 
+fpga1: PowerEdge R740XD Server: 
+
 - 32 Xeon 2.6Ghz cores 
 - 24 slots of 32GB RDIMMs (total 768Gb RAM) 
 - 4 FPGA cards [Intel FPGA Programmable Acceleration Card](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/acceleration-card-arria-10-gx.html)
+
+fpga2: 
+
+- has 16 cores, faking 32 with hyperthreading; 
+- 187G of RAM; 
+- model Xeon(R) Silver 4110
+- one fpga card
+
+Licensing: 5 floating licenses for Quartus
 
 ## How to get access
 
 - FPGA box is part of ERN (Eastern Regional Network), and hosted at Rutgers. Requests for access should fill out [this form for general Amarel access](https://oarc.rutgers.edu/access/) and specify that you need an account on ERN and that hardware you would like to use is FPGA. 
 
-## Directions to get to the box
+## Directions to get to the box (from Amarel)
 
-- ssh to amarel 
-- ssh to a machine called mace. This is a login node for Rutgers part of the ERN slurm federation
-- FOR now: ssh to fpga1. (For the future: run this command: `salloc -p fpga ...TBD... `  (in order for slurm to allocate fpga resources to you) )
+- ssh to amarel (your netid will be your username, and password is your RU password). e.g. `ssh kp807@amarel.hpc.rutgers.edu`. 
+- ssh to a machine called mace. This is a login node for Rutgers part of the ERN slurm federation. e.g. `ssh mace`. This is passwordless because your ssh keys have been set up when you got an ERN account. 
+- FOR now: ssh to fpga1, e.g. `ssh fpga1`. (For the future: run this command: `salloc -p fpga ...TBD... `  (in order for slurm to allocate fpga resources to you) )
+- alltogether, list of commands: 
+```
+ssh kp807@amarel.hpc.rutgers.edu
+ssh mace
+ssh fpga1
+```
+- for instructions how to run vnc server (remote desktop to run Quartus): see vncserver.md in this repo
 
 ## Join the community 
 
 - We have a [user forum](https://ask.oarc.rutgers.edu/questions/) - login with your Rutgers credentials
+- We have a slack space: fpga-dev.slack.com - join us! 
 
 ## Resources
 
@@ -38,6 +56,7 @@ PowerEdge R740XD Server:
 
 ## Past Events
 
+- May 2-5, 2019 - Intel OpenCL training attended by 5 people
 - Jan 18, 2019 - FPGA brown bag lunch
 - Nov xx, 2018 - AI on PC workshop (for engineering undergraduate students)
 - Oct 8, 2018 - FPGA Workshop by Bill Jenkins
