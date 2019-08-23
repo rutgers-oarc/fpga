@@ -1,5 +1,7 @@
 # FPGA at Rutgers
 
+There are two FPGA machines, located on [ERN, Eastern Regional Network](http://ern.hpc.rutgers.edu/). You can access them through any member of ERN. From Rutgers, the entry point is Rutgers Advanced Research Computing cluster, Amarel(https://rutgers-oarc.github.io/training/), as described below.
+
 ## Hardware Specs
 
 fpga1: PowerEdge R740XD Server: 
