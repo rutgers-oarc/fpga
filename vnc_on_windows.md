@@ -13,7 +13,7 @@ So, please read the instructions for the linux machine first to understand tunne
 - In putty, save a session called "amarel" (or something you will remember), with the following defaults: 
  * the server name will be `amarel.hpc.rutgers.edu`
  * in the putty options, you find `Connection -> SSH -> Tunnels` and enter the port you want forwarded from amarel - this is 5902 for
- turbovnc. See [this screenshot](!putty_configuration.png).
+ turbovnc. See [this screenshot](putty_configuration.png).
  * optionally add your authentication details if you don't want to type in your password all the time when connecting to amarel
  * save the connection details - this will enable you to do this once and forget it. 
 - once putty connects to amarel, you need to tunnel the same port to fpga1. Now you are in the linux world (both amarel and fpga1 are linux)
